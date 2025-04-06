@@ -1,0 +1,938 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f7f3e6;
+  color: #09465b;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@media (max-width: 768px) {
+  .slider img {
+    width: 120%; /* Aumenta el tamaño de la imagen */
+    margin-left: -10%;
+    height: 120%; /* Centra la imagen si es necesario */
+  }
+}
+.servicios {
+  padding: 3rem 1rem;
+  font-size: 1.5rem; /* Aumenta el tamaño de la letra */
+  text-align: center; /* Centra el texto */
+}
+.elegirnos {
+  padding: 3rem 1rem;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: #09465b;
+  color: #f7f3e6;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card .info {
+  padding: 1rem;
+}
+
+.razones {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.razon {
+  text-align: center;
+  background-color: #f7f3e6;
+}
+
+.numero {
+  background-color: #09465b;
+  color: #f7f3e6;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.whatsapp-button {
+  display: block;
+  width: fit-content;
+  margin: 2rem auto;
+  background-color: #25d366;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-button:hover {
+  background-color: #1ebe5d;
+}
+
+@media (min-width: 768px) {
+
+  .cards,
+  .razones {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .card,
+  .razon {
+    width: 30%;
+  }
+}
+/* Estilos generales del header */
+.header {
+  background-color: #09465b;
+  color: white;
+  border-bottom: 4px solid #f7f3e6;
+  width: 100%;
+  padding: 0.5rem 0; /* Reducido de 1rem */
+  position: relative;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px; /* Antes: 80px */
+  width: 100%;
+}
+
+.logo {
+  height: 60px; /* Antes: 60px */
+  width: 200;  /* Mantiene proporción natural */
+}
+
+.menu-toggle {
+  font-size: 1.75rem; /* Ligero ajuste si quieres que combine mejor */
+}
+
+/* Menú escritorio oculto por defecto en mobile */
+.nav-links {
+  display: none;
+}
+
+.nav-links a,
+.mobile-menu a {
+  color: #f7f3e6;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.75rem 1rem;
+  display: block;
+}
+
+.nav-links a:hover,
+.mobile-menu a:hover {
+  text-decoration: underline;
+}
+
+/* Ocultar checkbox real */
+.menu-toggle-checkbox {
+  display: none;
+}
+
+/* Estilo del botón hamburguesa */
+.menu-toggle-label {
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  display: block;
+  position: absolute;  /* Cambio aquí */
+  top: 50%;  /* Centrado verticalmente */
+  right: 10px;  /* Alineado a la derecha */
+  transform: translateY(-50%); /* Ajuste fino para centrarlo */
+}
+
+/* Menú mobile por defecto oculto */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #09465b;
+  padding: 1rem;
+  top: 60px; /* Ajusta la distancia desde la parte superior */
+  right: 0; /* Alinea el menú móvil al extremo derecho */
+  width: 200px; /* Ajusta el ancho del menú móvil */
+}
+
+.mobile-menu a {
+  color: #f7f3e6;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  font-weight: bold;
+}
+
+.mobile-menu a:hover {
+  text-decoration: underline;
+}
+
+/* Mostrar menú si el checkbox está marcado */
+.menu-toggle-checkbox:checked ~ .mobile-menu {
+  display: flex;
+}
+
+/* Desktop - ocultar toggle y mobile menu */
+@media (min-width: 768px) {
+  .menu-toggle-label {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: none !important;
+  }
+
+  .nav-links {
+    display: flex;
+  }
+}
+
+
+
+.footer {
+  background-color: #09465b;
+  color: #f7f3e6;
+  padding: 3rem 1rem 2rem;
+  font-family: 'Helvetica', sans-serif;
+  width: 100%; /* Aseguramos que ocupe todo el ancho */
+  border-top: 4px solid #f7f3e6; /* Raya en la parte superior del footer */
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px; /* O el ancho máximo que quieras */
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-section h3 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.footer-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-link {
+  color: #f7f3e6;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.social-links a {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  color: #f7f3e6;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #f7f3e6;
+}
+
+.footer-copy {
+  text-align: center;
+  border-top: 1px solid #4a6a76;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  padding: 16px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.whatsapp-float img {
+  width: 50px;
+  /* Ajusta el tamaño de tu logo */
+  height: 50px;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  background-color: #1ebe5b;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+/* Cambiar color del encabezado h2 */
+.servicios h2 {
+  color: #09465b;
+  /* Color que desees */
+}
+
+/* Cambiar color de los encabezados h3 dentro de .card */
+.servicios .card h3 {
+  color: #f7f3e6;
+  /* El color que prefieras */
+}
+
+/* Cambiar color de los párrafos dentro de .card */
+.servicios .card p {
+  color: #f7f3e6;
+  /* El color que prefieras */
+}
+
+.servicios a {
+  text-decoration: none;
+  /* Elimina el subrayado */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.text-column,
+.image-column {
+  flex: 1 1 50%;
+  padding: 1rem;
+}
+
+.image-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.side-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+@font-face {
+  font-family: 'HelveticaRoman';
+  src: url('fonts/Helvetica Roman.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaRoundedBd';
+  src: url('fonts/HelveticaRoundedLTStd-Bd.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaRoundedBlack';
+  src: url('fonts/HelveticaRoundedLTStd-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+a {
+  font-family: 'HelveticaRoundedBd', sans-serif;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f3e6;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  /* Aumenta tamaño base */
+}
+
+.contacto {
+  padding: 2rem;
+  text-align: center;
+}
+
+.contacto h2 {
+  color: #09465b;
+  font-size: 2.5rem;
+  /* Título más grande */
+  margin-bottom: 1.5rem;
+}
+
+.card-contacto {
+  background-color: #09465b;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #f7f3e6;
+  font-size: 1.125rem;
+  /* Aumenta texto dentro del recuadro */
+}
+
+.info-contacto h3 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  /* Subtítulo más grande */
+  margin-bottom: 1rem;
+}
+
+.info-contacto p {
+  margin: 1rem 0;
+  line-height: 1.6;
+  font-size: 1.125rem;
+}
+
+.info-contacto i {
+  margin-right: 8px;
+  color: #f7f3e6;
+}
+
+.redes-sociales i {
+  font-size: 1.75rem;
+  /* Íconos más grandes */
+  margin: 0 10px;
+  color: #f7f3e6;
+  cursor: pointer;
+}
+.infop {
+  font-size: 18px;
+}
+
+.whatsapp-box {
+  background-color: #f7f3e6;
+  color: #09465b;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  border-radius: 8px;
+  text-align: left;
+  font-size: 1.125rem;
+}
+
+.whatsapp-box h4 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.btn-whatsapp {
+  display: inline-block;
+  background-color: #25D366;
+  color: white;
+  padding: 1rem 1.75rem;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+
+.btn-whatsapp i {
+  margin-right: 8px;
+}
+
+.sede {
+  padding: 2rem;
+  text-align: center;
+}
+
+.sede h2 {
+  color: #09465b;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.sede-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.sede-imagen img {
+  width: 730px;
+  height: 328px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.sede-info {
+  background-color: #09465b;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  max-width: 400px;
+  text-align: left;
+}
+
+.sede-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.sede-info p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-size: 1.125rem;
+}
+
+.sede-mapa iframe {
+  width: 500px;
+  max-width: 684px;
+  height: 600px;
+  border-radius: 12px;
+}
+
+.sede-foto img {
+  width: 600px;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sede-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sede-foto img,
+  .sede-imagen img,
+  .sede-mapa iframe {
+    width: 100%;
+    max-width: 684px;
+    height: 736px;
+    /* Igual altura que la imagen de la fachada */
+    border-radius: 12px;
+    border: 0;
+  }
+
+  .sede-info {
+    max-width: 90%;
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f3e6;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+
+h2 {
+  text-align: center;
+  color: #09465b;
+  font-size: 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.equipo-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #f7f3e6;
+  margin: 0 auto 3rem;
+  max-width: 1200px;
+  border-radius: 8px;
+  overflow: hidden;
+  border-radius: 16px;
+  /* Bordes redondeados al bloque principal */
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* Sombra opcional */
+}
+
+.equipo-imagen img {
+  width: 448px;
+  height: 648px;
+  object-fit: cover;
+  display: block;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+
+.equipo-info {
+  background-color: #09465b;
+  color: #f7f3e6;
+  padding: 2rem;
+  max-width: 600px;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.equipo-info h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitulo {
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+}
+
+.equipo-info p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.etiquetas {
+  margin-top: 1.5rem;
+}
+
+.etiquetas span {
+  background-color:#f7f3e6;
+  color: #09465b;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.compromiso {
+  border-radius: 16px;
+  background-color: #09465b;
+  color: white;
+  padding: 2rem;
+  max-width: 1100px;
+  margin: 0 auto 3rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.compromiso p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-top: 1rem;
+}
+.compromiso h2 {
+ color: #f7f3e6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .equipo-contenedor {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .equipo-imagen img {
+    width: 90%;
+    height: auto;
+  }
+
+  .equipo-info {
+    width: 90%;
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+  width: 100%;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  width: 100%;
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  max-width: 1200px;
+  border-radius: 10px;
+}
+
+.item .text {
+  max-width: 600px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.item1 .text,
+.item3 .text {
+  padding-left: 20px;
+}
+
+.item2 .text {
+  padding-right: 20px;
+}
+
+.item1,
+.item3 {
+  flex-direction: row;
+}
+
+.item2 {
+  flex-direction: row;
+}
+
+@media (max-width: 768px) {
+  .item {
+    flex-direction: column;
+  }
+
+  .item img {
+    max-width: 100%;
+  }
+}
+
+#slider-img {
+  opacity: 1;
+  transition: opacity 1s ease-in-out; /* Transición suave para el cambio de opacidad */
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Estilos generales */
+body {
+  
+  background-color: #f7f3e6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #09465b;
+}
+/* Grid para servicios */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Mantener 4 columnas */
+  gap: 20px;
+}
+
+/* Ajustamos el tamaño de las tarjetas para hacerlas más anchas */
+.service-card {
+  background-color: #09465b;
+  color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  padding: 0; /* Eliminar padding para que las imágenes estén más cerca del marco */
+  height: 100%; /* Asegura que las tarjetas tengan la misma altura */
+  min-width: 250px; /* Aumentar el ancho mínimo de las tarjetas */
+}
+
+/* Cuando pasa el mouse sobre la tarjeta, aumenta su tamaño */
+.service-card:hover {
+  transform: scale(1.05);
+}
+
+/* Imagen */
+.service-image {
+  width: 100%;
+  height: 200px; /* Aumentar la altura de las imágenes */
+  object-fit: cover; /* Asegura que la imagen ocupe todo el espacio del recuadro */
+  border-radius: 10px; /* Asegura que las imágenes tengan bordes redondeados */
+}
+
+/* Título */
+.service-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px; /* Ajustar padding para que el texto esté más cerca de la imagen */
+  margin-top: auto; /* Esto asegura que el texto esté siempre en la parte inferior de la tarjeta */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-grid {
+    display: flex;
+    flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+    gap: 20px;
+  }
+
+  .service-card {
+    width: 100%; /* Hacer que las tarjetas ocupen el 100% del ancho en dispositivos pequeños */
+    margin-bottom: 20px;
+  }
+
+  .service-image {
+    height: 150px; /* Reducir el tamaño de las imágenes en dispositivos pequeños */
+  }
+
+  .service-title {
+    font-size: 1.25rem; /* Reducir tamaño de fuente en dispositivos pequeños */
+  }
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #f7f3e6;
+  padding: 30px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 900px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada */
+}
+
+.modal-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.modal-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.modal-description {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Botón WhatsApp */
+.whatsapp-btn {
+  background-color: #25d366;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.whatsapp-btn:hover {
+  background-color: #128c7e;
+}
+
+/* Cerrar Modal */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  bottom: 100px;
+  right: 10px;
+  font-size: 60px; /* Aumentar el tamaño del botón de cerrar */
+  color: #000000;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-grid {
+    display: flex;
+    flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+    gap: 20px;
+  }
+
+  .service-card {
+    width: 100%; /* Hacer que las tarjetas ocupen el 100% del ancho en dispositivos pequeños */
+    margin-bottom: 20px; /* Espaciado entre las tarjetas */
+  }
+
+  .service-image {
+    height: 200px; /* Reducir el tamaño de las imágenes en dispositivos pequeños */
+  }
+
+  .service-title {
+    font-size: 1.25rem; /* Reducir tamaño de fuente en dispositivos pequeños */
+  }
+}

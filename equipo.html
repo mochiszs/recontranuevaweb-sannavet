@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sannavet - Cuidamos la salud de tu mascota</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <div id="header-placeholder"></div>
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+      });
+  </script>
+
+  <a href="nuevasfotos/pngwsp.png" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contáctanos por WhatsApp">
+    <img src="nuevasfotos/pngwsp.png" alt="WhatsApp" />
+  </a>
+
+  <main class="main-container">
+    <section class="equipo">
+        <h2 style="font-family: 'HelveticaRoundedBlack';">Nuestro Equipo</h2>
+        <div class="equipo-contenedor">
+          <div class="equipo-imagen">
+            <img src="nuevasfotos/FOTO DOC_Mesa de trabajo 1.jpg" alt="Dra. Carla Pineda Llanos" />
+          </div>
+          <div class="equipo-info">
+            <h3 style="font-family: 'HelveticaRoundedBlack';">Dra. Carla Pineda Llanos </h3>
+            <p class="subtitulo">Director Médico y Fundadora</p>
+            <p>
+              La Dra. Carla Pineda Llanos es una médico veterinaria egresada de la Universidad Nacional de San Cristóbal de Huamanga, con una destacada trayectoria en el cuidado de animales de compañía. Posee una segunda especialidad en Medicina de Animales de Compañía de la Universidad Cayetano Heredia.
+            </p>
+            <p>
+              Con más de 13 años de experiencia en el ámbito veterinario, la Dra. Pineda se ha dedicado a ofrecer atención médica de alta calidad, integrando conocimientos actualizados, tecnología avanzada y un enfoque humanizado en cada consulta.
+            </p>
+            <p>
+              En Sanna Vet, lidera un equipo de profesionales comprometidos con la prevención, diagnóstico y tratamiento de diversas patologías, garantizando siempre el mejor cuidado para las mascotas.
+            </p>
+            <div class="etiquetas">
+              <span>Médicina Interna</span>
+              <span>Pediatría</span>
+              <span>Dermatología</span>
+              <span>Exóticos</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <section class="compromiso">
+        <h2 style="font-family: 'HelveticaRoundedBlack';">Nuestro Compromiso</h2>
+        <p>
+          En nuestra clínica veterinaria, nos comprometemos a proporcionar el más alto nivel de atención médica a cada mascota que atendemos. Entendemos que las mascotas son miembros importantes de la familia, y merecen ser tratadas con el mismo cuidado, respeto y dignidad.
+        </p>
+        <p>
+          Además de proporcionar atención médica excepcional, nos comprometemos a educar a los dueños de mascotas sobre la prevención de enfermedades, nutrición adecuada y cuidados generales para ayudarles a mantener a sus compañeros felices y saludables durante toda su vida.
+        </p>
+      </section>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sannavet - Cuidamos la salud de tu mascota</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <div id="header-placeholder"></div>
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+      });
+  </script>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="nuevasfotos/pngwsp.png" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contáctanos por WhatsApp">
+    <img src="nuevasfotos/pngwsp.png" alt="WhatsApp" />
+  </a>
+
+  <!-- Main Content -->
+  <main class="main-container">
+    <section class="section">
+      <div class="container">
+        <h1 class="title" style="font-family: 'HelveticaRoundedBlack';">Nuestros Servicios</h1>
+
+        <div class="services-grid">
+          <!-- Card for Vacunación -->
+          <div class="service-card" onclick="openModal('vacunacion')">
+            <img src="nuevasfotos/VACUNACIÓN_Mesa de trabajo 1.jpg" alt="Vacunación" class="service-image">
+            <div class="service-title">Vacunación</div>
+          </div>
+
+          <!-- Card for Pet Shop -->
+          <div class="service-card" onclick="openModal('petshop')">
+            <img src="nuevasfotos/PETSHOP_Mesa de trabajo 1.jpg" alt="Pet Shop" class="service-image">
+            <div class="service-title">Pet Shop</div>
+          </div>
+
+          <!-- Card for Consultas -->
+          <div class="service-card" onclick="openModal('consultas')">
+            <img src="nuevasfotos/CONSULTAS_Mesa de trabajo 1.jpg" alt="Consultas" class="service-image">
+            <div class="service-title">Consultas</div>
+          </div>
+
+          <!-- Card for Cirugías -->
+          <div class="service-card" onclick="openModal('cirugias')">
+            <img src="nuevasfotos/CIRUGÍAS_Mesa de trabajo 1.jpg" alt="Cirugías" class="service-image">
+            <div class="service-title">Cirugías</div>
+          </div>
+
+          <!-- Card for Exámenes de Laboratorio -->
+          <div class="service-card" onclick="openModal('examenes')">
+            <img src="nuevasfotos/EXÁMENES DE LABORATORIO_Mesa de trabajo 1.jpg" alt="Exámenes de Laboratorio" class="service-image">
+            <div class="service-title">Exámenes de Laboratorio</div>
+          </div>
+
+          <!-- Card for Baños y Grooming -->
+          <div class="service-card" onclick="openModal('banyos')">
+            <img src="nuevasfotos/BAÑOS Y GROOMING_Mesa de trabajo 1.jpg" alt="Baños y Grooming" class="service-image">
+            <div class="service-title">Baños y Grooming</div>
+          </div>
+
+          <!-- Card for Desparacitación -->
+          <div class="service-card" onclick="openModal('desparacitacion')">
+            <img src="nuevasfotos/DESPARASITACION_Mesa de trabajo 1.jpg" alt="Desparacitación" class="service-image">
+            <div class="service-title">Desparacitación</div>
+          </div>
+
+          <!-- Card for Otros Servicios -->
+          <div class="service-card" onclick="openModal('otros')">
+            <img src="nuevasfotos/OTROS SERVICIOS_Mesa de trabajo 1.jpg" alt="Otros Servicios" class="service-image">
+            <div class="service-title">Otros Servicios</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal for displaying service details -->
+  <div id="service-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <button onclick="closeModal()" class="close-btn">&times;</button>
+      <img id="modal-image" src="" alt="Service Image" class="modal-image">
+      <h2 id="modal-title" class="modal-title"></h2>
+      <p id="modal-description" class="modal-description"></p>
+      <a id="whatsapp-btn" class="whatsapp-btn" href="" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+
+  <script>
+    // Function to open modal and display the service details
+    function openModal(service) {
+      let serviceData = {
+        vacunacion: {
+          image: "nuevasfotos/VACUNACIÓN_Mesa de trabajo 1.jpg",
+          title: "Vacunación",
+          description: "Ofrecemos programas de vacunación personalizados según la edad, estilo de vida y riesgos específicos de su mascota.",
+          whatsappLink: "https://wa.me/+51966842258?text=Hola, me gustaría obtener más información sobre el servicio de Vacunación"
+        },
+        petshop: {
+          image: "nuevasfotos/PETSHOP_Mesa de trabajo 1.jpg",
+          title: "Pet Shop",
+          description: "Disponemos de una tienda con alimentos premium, suplementos, accesorios y productos de cuidado seleccionados por nuestros veterinarios.",
+          whatsappLink: "https://wa.me/+51966842258?text=Hola, me gustaría obtener más información sobre el servicio de Pet Shop"
+        },
+        consultas: {
+          image: "nuevasfotos/CONSULTAS_Mesa de trabajo 1.jpg",
+          title: "Consultas",
+          description: "Ofrecemos consultas generales y especializadas para diagnosticar y tratar diversas condiciones de salud en su mascota.",
+          whatsappLink: "https://wa.me/+51966842258?text=Hola, me gustaría obtener más información sobre el servicio de Consultas"
+        },
+        cirugias: {
+          image: "nuevasfotos/CIRUGÍAS_Mesa de trabajo 1.jpg",
+          title: "Cirugías",
+          description: "Realizamos procedimientos quirúrgicos desde rutinarios hasta complejos, incluyendo esterilizaciones, castraciones, cirugías ortopédicas y de tejidos blandos.",
+          whatsappLink: "https://wa.me/+51966842258?text=Hola, me gustaría obtener más información sobre el servicio de Cirugías"
+        },
+        examenes: {
+          image: "nuevasfotos/EXÁMENES DE LABORATORIO_Mesa de trabajo 1.jpg",
+          title: "Exámenes de Laboratorio",
+          description: "Nuestro laboratorio interno permite realizar análisis de sangre, orina, heces y citologías con resultados rápidos.",
+          whatsappLink: "https://wa.me/+51966842258?text=Hola, me gustaría obtener más información sobre el servicio de Exámenes de Laboratorio"
+        },
+        banyos: {
+          image: "nuevasfotos/BAÑOS Y GROOMING_Mesa de trabajo 1.jpg",
+          title: "Baños y Grooming",
+          description: "Nuestros servicios de peluquería incluyen baños terapéuticos, cortes de pelo, cepillado, limpieza de oídos y corte de uñas.",
+          whatsappLink: "https://wa.me/+51966842258?text=Hola, me gustaría obtener más información sobre el servicio de Baños y Grooming"
+        },
+        desparacitacion: {
+          image: "nuevasfotos/DESPARASITACION_Mesa de trabajo 1.jpg",
+          title: "Desparacitación",
+          description: "Implementamos programas de desparasitación interna y externa adaptados a las necesidades de cada mascota.",
+          whatsappLink: "https://wa.me/+51966842258?text=Hola, me gustaría obtener más información sobre el servicio de Desparacitación"
+        },
+        otros: {
+          image: "nuevasfotos/OTROS SERVICIOS_Mesa de trabajo 1.jpg",
+          title: "Otros Servicios",
+          description: "Ofrecemos servicios adicionales como radiografías, ecografías, hospitalización, tratamientos dentales, fisioterapia y asesoramiento nutricional.",
+          whatsappLink: "https://wa.me/+51966842258?text=Hola, me gustaría obtener más información sobre el servicio de Otros Servicios"
+        }
+      };
+
+      let selectedService = serviceData[service];
+
+      document.getElementById("modal-image").src = selectedService.image;
+      document.getElementById("modal-title").innerText = selectedService.title;
+      document.getElementById("modal-description").innerText = selectedService.description;
+      document.getElementById("whatsapp-btn").href = selectedService.whatsappLink;
+
+      document.getElementById("service-modal").style.display = "flex";
+    }
+
+    // Function to close the modal
+    function closeModal() {
+      document.getElementById("service-modal").style.display = "none";
+    }
+  </script>
+</body>
+
+</html>

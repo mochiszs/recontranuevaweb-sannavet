@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sannavet - Cuidamos la salud de tu mascota</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <div id="header-placeholder"></div>
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+      });
+  </script>
+
+  <a href="nuevasfotos/pngwsp.png" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contáctanos por WhatsApp">
+    <img src="nuevasfotos/pngwsp.png" alt="WhatsApp" />
+  </a>
+
+  <main class="main-container">
+    <section class="section">
+        <h2 style="font-family: HelveticaRoundedBlack;">Nosotros</h2>
+        <div class="container">
+          <div class="item item1">
+            <img src="/nuevasfotos/NUESTRA HISTORIA_Mesa de trabajo 1.jpg" alt="Imagen 1">
+            <div class="text" style="font-family: HelveticaRoundedBd;">
+              <h1 style="font-family: HelveticaRoundedBlack;">Nuestra Historia</h1>
+              ‎ 
+                <p>Fundada en 2010, nuestra clínica veterinaria nació con la misión de proporcionar atención médica de
+                    calidad a las mascotas de nuestra comunidad. Lo que comenzó como un pequeño consultorio ha crecido hasta
+                    convertirse en un centro veterinario completo con servicios integrales.</p>
+                    <p> A lo largo de los años, hemos atendido a miles de mascotas, construyendo relaciones duraderas con sus
+                        dueños y ganándonos la confianza de la comunidad gracias a nuestro compromiso con la excelencia y el
+                        cuidado compasivo.</p>
+            </div>
+          </div>
+          <div class="item item2">
+            <div class="text" style="font-family: HelveticaRoundedBd;">
+              <h1 style="font-family: HelveticaRoundedBlack;">Nuestra Misión</h1>
+              ‎ 
+               <p> Nuestra misión es proporcionar atención veterinaria excepcional y compasiva a cada mascota que
+                atendemos. Nos esforzamos por mejorar la calidad de vida de los animales a través de servicios médicos
+                avanzados, educación preventiva y un enfoque centrado en el cliente.</p>
+                <p>Creemos que cada mascota merece ser tratada con respeto y dignidad, y trabajamos incansablemente para
+                    asegurar su bienestar y salud óptima en todas las etapas de su vida.</p>
+            </div>
+            <img src="/nuevasfotos/MISIÓN_Mesa de trabajo 1.jpg" alt="Imagen 2">
+          </div>
+          <div class="item item3">
+            <img src="/nuevasfotos/VISIÓN_Mesa de trabajo 1.jpg" alt="Imagen 3">
+            <div class="text" style="font-family: HelveticaRoundedBd;">
+              <h1 style="font-family: HelveticaRoundedBlack;">Nuestra Visión</h1>
+              ‎ 
+               <p> Aspiramos a ser reconocidos como líderes en atención veterinaria, estableciendo nuevos estándares de
+                excelencia en el cuidado de animales. Nuestra visión es crear un entorno donde la innovación médica, la
+                compasión y el servicio excepcional se combinen para ofrecer la mejor experiencia posible a nuestros
+                pacientes y sus familias.</p>
+                <p> Buscamos continuamente expandir nuestros servicios y adoptar las últimas tecnologías y tratamientos para
+                    mantenernos a la vanguardia de la medicina veterinaria.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+</body>
+
+</html>

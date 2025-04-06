@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sannavet - Cuidamos la salud de tu mascota</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+    <script>
+        fetch("header.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("header-placeholder").innerHTML = data;
+                const script = document.createElement("script");
+                script.src = "script.js";
+                document.body.appendChild(script);
+            });
+    </script>
+
+    <a href="https://wa.me/51966842258" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contáctanos por WhatsApp">
+        <img src="nuevasfotos/wsplogon.jpg" alt="WhatsApp" />
+    </a>
+
+    <main>
+        <!-- Slider -->
+        <div class="slider">
+            <img id="slider-img" src="nuevasfotos/PORTADA 1_Mesa de trabajo 1.jpg" alt="Slide 1" />
+          </div>
+          
+
+        <!-- Servicios -->
+        <section class="servicios" id="servicios">
+            <h2 style="font-family: 'HelveticaRoundedBlack';">Conócenos</h2>
+            <div class="cards">
+                <div class="card">
+                    <a href="nosotros.html">
+                        <img src="nuevasfotos/SOBRE NOSOTROS_Mesa de trabajo 1_Mesa de trabajo 1.jpg" alt="Sobre Nosotros" />
+                        <div class="info">
+                            <h3>Sobre Nosotros</h3>
+                            <a class="infop">Conozca más sobre nuestra clínica veterinaria y nuestra pasión por el cuidado de sus
+                                mascotas.</a>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="servicios.html">
+                        <img src="nuevasfotos/NUESTROS SERVICIOS_Mesa de trabajo 1_Mesa de trabajo 1.jpg" alt="Nuestros Servicios" />
+                        <div class="info">
+                            <h3>Nuestros Servicios</h3>
+                            <a class="infop">Ofrecemos una amplia gama de servicios veterinarios para mantener a su mascota saludable
+                                y feliz.</a>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="equipo.html">
+                        <img src="nuevasfotos/NUESTRO EQUIPO_Mesa de trabajo 1_Mesa de trabajo 1_Mesa de trabajo 1.jpg" alt="Nuestro Equipo" />
+                        <div class="info">
+                            <h3>Nuestro Equipo</h3>
+                            <a class="infop" >Conozca a nuestro equipo de profesionales dedicados al cuidado y bienestar de sus
+                                mascotas.</a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ¿Por qué elegirnos? -->
+        <section class="elegirnos">
+            <h2 style="font-family: 'HelveticaRoundedBlack';">¿Por qué elegirnos?</h2>
+            <div class="razones">
+                <div class="razon">
+                    <div class="numero">1</div>
+                    <h3>Experiencia y Profesionalismo</h3>
+                    <p>Contamos con un equipo de veterinarios altamente calificados y con años de experiencia.</p>
+                </div>
+                <div class="razon">
+                    <div class="numero">2</div>
+                    <h3>Atención Personalizada</h3>
+                    <p>Cada mascota recibe un trato único y personalizado según sus necesidades específicas.</p>
+                </div>
+                <div class="razon">
+                    <div class="numero">3</div>
+                    <h3>Cuidado Integral</h3>
+                    <p>Brindamos un enfoque completo en la salud de tu mascota, desde medicina preventiva hasta
+                        tratamientos especializados.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Botón de WhatsApp -->
+        <a href="https://wa.me/51966842258" class="whatsapp-button" target="_blank">
+            💬 Contáctanos en WhatsApp
+        </a>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch("footer.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("footer-placeholder").innerHTML = data;
+            });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
