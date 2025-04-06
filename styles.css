@@ -16,6 +16,7 @@ h2 {
   height: auto;
   display: block;
 }
+/*asdadasdasd*/
 @media (max-width: 768px) {
   .slider img {
     width: 120%; /* Aumenta el tamaño de la imagen */
