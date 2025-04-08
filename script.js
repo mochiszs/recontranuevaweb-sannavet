@@ -75,9 +75,9 @@ const services = {
   },
   desparacitacion: {
     title: "Desparacitación",
-    description: "Programas de desparacitación interna y externa para tu mascota.",
+    description: "Programas de desparasitación interna y externa para tu mascota.",
     image: "https://via.placeholder.com/500x300",
-    whatsappLink: "https://wa.me/+51966842258?text=Hola, me gustaría obtener más información sobre el servicio de Desparacitación"
+    whatsappLink: "https://wa.me/+51966842258?text=Hola, me gustaría obtener más información sobre el servicio de Desparasitación"
   },
   otros: {
     title: "Otros Servicios",
