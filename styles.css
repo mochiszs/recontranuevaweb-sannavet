@@ -937,3 +937,73 @@ body {
     font-size: 1.25rem; /* Reducir tamaño de fuente en dispositivos pequeños */
   }
 }
+
+/* Estilos generales para el formulario */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Estilo para las etiquetas */
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Estilo para los campos de entrada */
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Estilo para el botón */
+form button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para el textarea */
+form textarea {
+  resize: vertical;
+}
+
+/* Estilo para campos de selección */
+form select {
+  appearance: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+/* Estilo para campos de error (opcional) */
+form input:invalid,
+form textarea:invalid {
+  border-color: #e74c3c;
+}

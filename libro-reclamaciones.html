@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sannavet - Cuidamos la salud de tu mascota</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="nuevasfotos/favicon.png" sizes="32x32" />
+</head>
+
+<body>
+  <!-- Header -->
+  <div id="header-placeholder"></div>
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+      });
+  </script>
+
+  <a href="https://wa.me/51966842258" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contáctanos por WhatsApp">
+    <img src="nuevasfotos/nuevologowsp.png" alt="WhatsApp" />
+  </a>
+
+  <main class="main-container">
+    <form onsubmit="enviarReclamo(event)">
+        <label for="tipo-documento">Tipo Documento</label>
+        <select id="tipo-documento" name="tipo-documento">
+          <option value="">Seleccione</option>
+          <option value="dni">DNI</option>
+          <option value="ce">Carné de extranjería</option>
+        </select>
+    
+        <label for="numero-documento">Nro Documento</label>
+        <input type="text" id="numero-documento" name="numero-documento">
+    
+        <label for="apellido-paterno">Apellido Paterno</label>
+        <input type="text" id="apellido-paterno" name="apellido-paterno">
+    
+        <label for="apellido-materno">Apellido Materno</label>
+        <input type="text" id="apellido-materno" name="apellido-materno">
+    
+        <label for="nombres">Nombres</label>
+        <input type="text" id="nombres" name="nombres">
+    
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono">
+    
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+    
+        <label for="email-confirmacion">Confirmar Email</label>
+        <input type="email" id="email-confirmacion" name="email-confirmacion">
+    
+        <label for="direccion">Dirección</label>
+        <input type="text" id="direccion" name="direccion">
+    
+        <label for="es-menor">¿Es menor de edad?</label>
+        <select id="es-menor" name="es-menor">
+          <option value="si">Sí</option>
+          <option value="no">No</option>
+        </select>
+    
+        <label for="nombres-adulto">Nombres del adulto responsable</label>
+        <input type="text" id="nombres-adulto" name="nombres-adulto">
+    
+        <label for="direccion-adulto">Dirección del adulto</label>
+        <input type="text" id="direccion-adulto" name="direccion-adulto">
+    
+        <label for="telefono-adulto">Teléfono del adulto</label>
+        <input type="tel" id="telefono-adulto" name="telefono-adulto">
+    
+        <label for="email-adulto">Email del adulto</label>
+        <input type="email" id="email-adulto" name="email-adulto">
+    
+        <label for="asunto">Asunto</label>
+        <textarea id="asunto" name="asunto" rows="4" placeholder="Describa su reclamo..."></textarea>
+    
+        <button type="submit">Enviar Reclamo</button>
+      </form>
+
+      <script>
+        function enviarReclamo(event) {
+          event.preventDefault(); // Evita que el formulario se envíe
+          alert("Reclamo Enviado"); // Muestra el mensaje emergente
+        }
+      </script>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+</body>
+
+</html>
